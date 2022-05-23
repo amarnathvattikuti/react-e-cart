@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import NavbarHeader from './componants/Navbar';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Items from './componants/Items';
+import ItemDetails from './componants/itemDetails';
+import CartItems from './componants/cartItems';
+import OrderSuccess from './componants/OrdePlaced';
+import Footer from './componants/footer';
 import './App.css';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavbarHeader />
+        <Routes>
+          <Route path="/" element={< Items />} />
+          <Route path="/cartItems" element={< CartItems />} />
+          <Route path="/itemDetails/:id" element={< ItemDetails />} />
+          <Route path="/OrderPlaced" element={< OrderSuccess />} />
+        </Routes>
+        < Footer />
+      </BrowserRouter>
+    </>
+
   );
 }
 

@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+body{
+  background-color: #efefef;
+}
+.navbar{
+    padding: 1rem;
+}
+.card_style{
+  cursor: pointer;
+  transition: .3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.smalltrash{
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btnplsOrd{
+    float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card_style:hover{
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.082);
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.iteamsdetails{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items_img{
+    flex: .4;
+}
+.items_img img{
+    width: 20rem;
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details{
+    flex: .5;
+};
+
+.rating{
+    background-color: green;
+}
+
+.Item-container {
+    max-width: 800px;
+}
+
+.incNred{
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.gTotal{
+    max-width: 70%;
+}
+
+@media (max-width:891px){
+    .iteamsdetails{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Item-container {
+        max-width: 90%;
+    }
+    .gTotal{
+        max-width: 50%;
+        text-align: left;
+    }
+}
+
+@media (max-width:460px){
+    .smalltrash{
+        display: block;
+    }
+    .largetrash{
+        display:none;
+    }
+    .emptycart_img{
+        margin-right: 50px;
+    }
+    .smallclose{
+        display: none;
+    }
+
+    /* individual iteams details */
+   
+    .items_img img{
+        width: 16rem;
+    }
+    .Item-container {
+        max-width: 90%;  
+      }
+      .gTotal{
+        max-width: 100%;
+        text-align: center;
+    }
+    .PlsOrder{
+        justify-content: center !important;
+        max-width: 100%;
+    }
+    .btnplsOrd{
+        float: none;
+        width: 100%;
+    }
+    
 }
