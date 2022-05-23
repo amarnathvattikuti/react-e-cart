@@ -14,6 +14,7 @@ const ItemDetails = () => {
   //console.log(id)
   const compareData = () => {
     let compareitemData = getdata.filter((e) => {
+      // eslint-disable-next-line
       return e.id == id;
     })
     setData(compareitemData);
@@ -21,6 +22,7 @@ const ItemDetails = () => {
   
   useEffect(() => {
     compareData();
+    // eslint-disable-next-line
   }, [id]);
 
 
